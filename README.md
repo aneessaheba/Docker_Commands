@@ -30,6 +30,8 @@ Docker helps eliminate environment related issues, ensures consistency across sy
    COPY . .
    CMD ["python", "app.py"]
 
+## Steps 5–10 and Conclusion
+
 5. Check the Docker images created on your system:
    `docker images`
 
@@ -54,5 +56,4 @@ Docker helps eliminate environment related issues, ensures consistency across sy
 ## Conclusion
 
 Docker makes applications **portable, reproducible, and easy to deploy**.  
-
-
+Once you understand these steps, running your project in any environment becomes simple and reliable, especially for Python, machine learning, and web applications.
