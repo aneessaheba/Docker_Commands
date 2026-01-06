@@ -33,8 +33,6 @@ Docker helps eliminate environment-related issues, ensures consistency across sy
    COPY . .
    CMD ["python", "app.py"]
 
-## Steps 5–10 and Conclusion
-
 5. Check the Docker images created on your system:
    `docker images`
 
