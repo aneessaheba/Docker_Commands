@@ -1,4 +1,4 @@
-# Docker Explained: What It Is and How to Dockerize a Python Project 
+# Docker Explained: What It Is and How to Dockerize a Project 
 
 Docker helps solve a common problem developers face: **"It works on my machine, but not on yours."**  
 By packaging everything an application needs into a container, Docker ensures the app runs the same way everywhere.
