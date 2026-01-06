@@ -59,24 +59,148 @@ docker run my-python-app
 docker run -p 8501:8501 my-python-app
 ```
 
+**Run container in detached mode (background):**
+```bash
+docker run -d -p 8501:8501 my-python-app
+```
+
+**Run container with a custom name:**
+```bash
+docker run --name my-app-container -p 8501:8501 my-python-app
+```
+
 ### 7. Verify running Docker containers
+
+**See all running containers:**
 ```bash
 docker ps
 ```
 
-### 8. Stop a running container
+**See all containers (including stopped ones):**
+```bash
+docker ps -a
+```
+
+### 8. View container logs
+```bash
+docker logs <container_id>
+```
+
+**Follow logs in real-time:**
+```bash
+docker logs -f <container_id>
+```
+
+### 9. Execute commands inside a running container
+```bash
+docker exec -it <container_id> /bin/bash
+```
+
+### 10. Stop a running container
 ```bash
 docker stop <container_id>
 ```
 
-### 9. Remove a stopped container
+### 11. Start a stopped container
+```bash
+docker start <container_id>
+```
+
+### 12. Restart a container
+```bash
+docker restart <container_id>
+```
+
+### 13. Remove a stopped container
 ```bash
 docker rm <container_id>
 ```
 
-### 10. Remove the Docker image
+**Force remove a running container:**
+```bash
+docker rm -f <container_id>
+```
+
+### 14. Remove the Docker image
 ```bash
 docker rmi my-python-app
+```
+
+**Force remove an image:**
+```bash
+docker rmi -f my-python-app
+```
+
+### 15. Remove all stopped containers
+```bash
+docker container prune
+```
+
+### 16. Remove all unused images
+```bash
+docker image prune -a
+```
+
+### 17. View Docker disk usage
+```bash
+docker system df
+```
+
+### 18. Clean up everything (containers, images, networks, cache)
+```bash
+docker system prune -a
+```
+
+### 19. Tag an image for Docker Hub
+```bash
+docker tag my-python-app username/my-python-app:latest
+```
+
+### 20. Push image to Docker Hub
+```bash
+docker push username/my-python-app:latest
+```
+
+### 21. Pull an image from Docker Hub
+```bash
+docker pull username/my-python-app:latest
+```
+
+### 22. Create a `.dockerignore` file
+Create a `.dockerignore` file to exclude unnecessary files from the build:
+```
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.git
+.gitignore
+.vscode
+.idea
+*.md
+venv/
+env/
+```
+
+## Useful Docker Compose Commands
+
+If using `docker-compose.yml`:
+```bash
+# Start services
+docker-compose up
+
+# Start services in detached mode
+docker-compose up -d
+
+# Stop services
+docker-compose down
+
+# View logs
+docker-compose logs
+
+# Rebuild images
+docker-compose build
 ```
 
 ## Conclusion
