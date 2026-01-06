@@ -51,6 +51,8 @@ Docker helps eliminate environment related issues, ensures consistency across sy
 10. Remove the Docker image:
     `docker rmi my-python-app`
 
+## Conclusion
 
 Docker makes applications **portable, reproducible, and easy to deploy**.  
+
 
