@@ -83,4 +83,3 @@ docker rmi my-python-app
 
 Docker makes applications **portable, reproducible, and easy to deploy**.
 
-Once you understand these steps, running your project in any environment becomes simple and reliable, especially for Python, machine learning, and web applications.
