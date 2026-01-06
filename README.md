@@ -1,4 +1,4 @@
-# Docker Explained: What It Is and How to Dockerize a Python Project 🐳
+# Docker Explained: What It Is and How to Dockerize a Python Project 
 
 Docker helps solve a common problem developers face: **"It works on my machine, but not on yours."**  
 By packaging everything an application needs into a container, Docker ensures the app runs the same way everywhere.
@@ -32,3 +32,32 @@ Docker helps eliminate environment-related issues, ensures consistency across sy
    RUN pip install --no-cache-dir -r requirements.txt
    COPY . .
    CMD ["python", "app.py"]
+
+## Steps 5–10 and Conclusion
+
+5. Check the Docker images created on your system:
+   `docker images`
+
+6. Run the Docker container:
+   - For a normal Python application:
+     `docker run my-python-app`
+   - For Streamlit or web applications:
+     `docker run -p 8501:8501 my-python-app`
+
+7. Verify running Docker containers:
+   `docker ps`
+
+8. Stop a running container:
+   `docker stop <container_id>`
+
+9. Remove a stopped container:
+   `docker rm <container_id>`
+
+10. Remove the Docker image:
+    `docker rmi my-python-app`
+
+## Conclusion
+
+Docker makes applications **portable, reproducible, and easy to deploy**.  
+Once you understand these steps, running your project in any environment becomes simple and reliable, especially for Python, machine learning, and web applications.
+
