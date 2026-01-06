@@ -1,4 +1,4 @@
-# Docker Explained: What It Is and How to Dockerize a Project
+# Docker: What It Is and How to Dockerize a Project
 
 ## What Is Docker?
 
